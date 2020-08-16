@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css'; 
+import { count, length } from './numbers.js';
 
 const userName = 'Igor';
 const age = 30;
 const human = true;
+
 
 function App() {
   return (
@@ -20,21 +22,27 @@ function App() {
         <i>Hello Hello Hello</i>
         </h2>
         <p>
-        my name: {userName}
+          my name: {userName}
         </p>
         <p>
-        my age: {age}
+         my age: {age}
         </p>
         <p>
-        {human && 'I am from Earth'}
+          {human && 'I am from Earth'}
         </p>
         <p>
-        {human ? 'i am born on Earth' : 'i am not born on Earth'}
-        {null}
-        {undefined}
-        {false}
-        {true}
-        {human}
+          {human ? 'i am born on Earth' : 'i am not born on Earth'}
+          {null}
+          {undefined}
+          {false}
+          {true}
+          {human}
+        </p>
+
+        <p style={{
+          color: 'lightblue'
+        }}>
+          New number: { count*length }
         </p>
         <a
           className="App-link"
