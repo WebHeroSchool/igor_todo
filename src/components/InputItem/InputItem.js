@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InputItem = () => (
-	<div>InputItem
+	<div className='wrap-input'>Введите новое дело
 	</div>
 );
 
