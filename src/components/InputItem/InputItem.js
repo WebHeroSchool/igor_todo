@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from '../App/App.module.css';
 
 const InputItem = () => (
-	<div className='wrap-input'>Введите новое дело
+	<div className={styles.input}>Введите новое дело
 	</div>
 );
 
