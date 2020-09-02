@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../App/App.module.css';
+import styles from './InputItem.module.css';
 
 const InputItem = () => (
 	<div className={styles.input}>Введите новое дело
