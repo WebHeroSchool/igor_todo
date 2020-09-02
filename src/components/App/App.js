@@ -9,13 +9,16 @@ const App = () => {
 	
 	const items = [
 		{
-			value: 'Купить хлеб'
+			value: 'Купить хлеб',
+			isDone: true
 		},
 		{
-			value: 'Купить молоко'
+			value: 'Купить молоко',
+			isDone: false
 		},
 		{
-			value: 'Купить масло'
+			value: 'Купить масло',
+			isDone: false
 		}
 	];
 
