@@ -65,13 +65,25 @@ class App extends React.Component {
 		]
 	};
 
+	//onClickDone = isDone => console.log(isDone); короткая запись
+
+	constructor(props) {
+		super(props);
+
+		this.onClickDone = this.onClickDone.bind(this);
+	}
+
+	onClickDone(isDone) {
+		console.log(isDone);
+	}
+
 	render() {
 		return (
 			<div className={styles.wrap}>
 			<h2 className={styles.title}>Важные дела</h2>
 			<MaterialUIPickers />
 			<InputItem />
-			<ItemList items={this.state.items}/>
+			<ItemList items={this.state.items} onClickDone={this.onClickDone} />
 			<Footer count={5}/>
 			</div>
 		);
