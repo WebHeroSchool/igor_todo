@@ -48,8 +48,8 @@ function MaterialUIPickers() {
 };
 
 class App extends React.Component {
-	render() {
-		const items = [
+	state = {
+		items: [
 			{
 				value: 'Купить хлеб',
 				isDone: true
@@ -62,14 +62,16 @@ class App extends React.Component {
 				value: 'Купить масло',
 				isDone: false
 			}
-		];
+		]
+	};
 
+	render() {
 		return (
 			<div className={styles.wrap}>
 			<h2 className={styles.title}>Важные дела</h2>
 			<MaterialUIPickers />
 			<InputItem />
-			<ItemList items={items}/>
+			<ItemList items={this.state.items}/>
 			<Footer count={5}/>
 			</div>
 		);
