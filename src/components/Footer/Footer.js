@@ -60,7 +60,7 @@ function SimpleMenu() {
   );
 }
 
-const Footer = ({ count }) => (<div className={styles.wrap}>
+const Footer = ({ count, onClickFooter }) => (<div className={styles.wrap} onClick={onClickFooter}>
 	<div className={styles.item}>Осталось дел 
 		<span className={styles.number}>{count}</span> 
 	</div>
