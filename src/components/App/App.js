@@ -4,13 +4,13 @@ import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
-import { withStyles } from '@material-ui/core/styles';
+// import { withStyles } from '@material-ui/core/styles';
 
 class App extends React.Component {
 	state = {
 		items: [
 			{
-				value: 'Купить хлеб',
+				value: 'Купить яйца',
 				isDone: false,
 				id: 1
 			},
@@ -50,6 +50,18 @@ class App extends React.Component {
 		this.setState({ items: newItemList });
 	};
 
+	onClickDelete = id => {
+		const newItemList = this.state.items.filter(item => {
+			const newItem = { ...item };
+
+			if (item.isDone === false) {
+				return newItem; 
+			}
+
+		});
+		this.setState({ items: newItemList});
+	};
+
 	render() {
 		return (
 			<div className={styles.wrap}>
@@ -57,7 +69,7 @@ class App extends React.Component {
 			<Calendar />
 			<InputItem />
 			<ItemList items={this.state.items} onClickDone={this.onClickDone} />
-			<Footer count={this.state.count} onClickFooter={this.onClickFooter} />
+			<Footer count={this.state.count} onClickDelete={this.onClickDelete} />
 			</div>
 		);
 	}
